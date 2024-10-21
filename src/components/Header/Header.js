@@ -8,7 +8,7 @@ function Header() {
 	return (
 		<div className="header">
 			<div className="header_logo">
-				<StorefrontIcon className="header_logoImage" fontSize="large" />
+				<StorefrontIcon className="header_logoImage" />
 				<h2 className="header_logoTitle">eShop</h2>
 			</div>
 
@@ -33,8 +33,8 @@ function Header() {
 					<span className="nav_itemLineTwo">Shop</span>
 				</div>
 
-				<div className="nav_item">
-					<ShoppingBasketIcon className="nav_itemBasket" />
+				<div className="nav_itemBasket">
+					<ShoppingBasketIcon />
 					<span className="nav_itemLineTwo nav_basketCount">10</span>
 				</div>
 			</div>
