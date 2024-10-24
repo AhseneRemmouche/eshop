@@ -14,8 +14,10 @@
   }
 
   .product_info {
-    height: 100px;
+    height: 130px;
     margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
   }
   .product_rating {
     display: flex;
