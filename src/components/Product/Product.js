@@ -15,7 +15,7 @@ function Product({ id, title, image, price, rating }) {
         </p>
         <div className='product_rating'>
           {Array(rating).fill().map((_, i) => {
-            return <p>⭐</p>
+            return <p id={i}>⭐</p>
           })}
 
         </div>
