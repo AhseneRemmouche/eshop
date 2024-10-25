@@ -3,14 +3,17 @@ import StorefrontIcon from "@mui/icons-material/Storefront";
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
 import SearchIcon from "@mui/icons-material/Search";
 import React from "react";
+import {Link} from 'react-router-dom'
 
 function Header() {
 	return (
 		<div className="header">
+			<Link to="/">
 			<div className="header_logo">
 				<StorefrontIcon className="header_logoImage" />
 				<h2 className="header_logoTitle">eShop</h2>
 			</div>
+			</Link>
 
 			<div className="header_search">
 				<input
@@ -32,11 +35,12 @@ function Header() {
 					<span className="nav_itemLineOne">Your</span>
 					<span className="nav_itemLineTwo">Shop</span>
 				</div>
-
+				<Link to="/checkout">
 				<div className="nav_itemBasket">
 					<ShoppingBasketIcon />
 					<span className="nav_itemLineTwo nav_basketCount">10</span>
 				</div>
+				</Link>
 			</div>
 		</div>
 	);
