@@ -3,7 +3,7 @@ import "./CheckoutProduct.css";
 
 function CheckoutProduct({id,title,image,price,rating}) {
 	return (
-		<div className="checkoutProduct">
+		<div className="checkoutProduct" id={id}>
 			<img
 				src={image}
 				alt=""
@@ -17,7 +17,11 @@ function CheckoutProduct({id,title,image,price,rating}) {
 					<small>$</small>
 					<strong>{price}</strong>
 				</p>
-				<div className="checkoutProduct_rating">⭐⭐⭐⭐</div>
+				<div className="checkoutProduct_rating">
+					{Array(rating).fill().map((_,i)=>{
+						return <p id={id}>⭐</p>
+					})}
+				</div>
 				<button>Remove from Basket</button>
 			</div>
 		</div>
