@@ -1,10 +1,6 @@
-// here we define all the application level states and define actions to make the changes to the state
-
 export const initialState = {
 	basket: [],
 };
-
-//Selector
 
 export const getBasketTotal = (basket) => {
 	return basket?.reduce((amount, item) => item.price + amount, 0);
@@ -17,11 +13,8 @@ const reducer = (state, action) => {
 				...state,
 				basket: [...state.basket, action.item],
 			};
-
 		case "REMOVE_FROM_BASKET":
-			const index = state.basket.findIndex(
-				(basketItem) => basketItem.id === action.id
-			);
+			const index = state.basket.findIndex((item) => item.id === action.id);
 
 			let newBasket = [...state.basket];
 
@@ -33,10 +26,7 @@ const reducer = (state, action) => {
 				);
 			}
 
-			return {
-				...state,
-				basket: newBasket,
-			};
+			return { ...state, basket: newBasket };
 
 		default:
 			return state;
