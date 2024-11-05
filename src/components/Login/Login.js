@@ -17,6 +17,7 @@ function Login() {
 			toast.success("User Registered Successfully!!", {
 				position: "top-center",
 			});
+			window.location.href = "/profile"
 		}catch(error){
 			console.log(error.message)
 			toast.error(error.message, {

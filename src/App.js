@@ -18,6 +18,7 @@ function App() {
 				<Route path="/checkout" element={<Checkout />} />
 				<Route path="/login" element={<Login />} />
 				<Route path="/register" element={<Register />} />
+				<Route path="/profile" />
 			</Routes>
 			<ToastContainer />
 		</div>
