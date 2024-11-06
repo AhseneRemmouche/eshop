@@ -11,20 +11,19 @@ function Login() {
 
 	async function handleLogin(e) {
 		e.preventDefault();
-		try{
-			await signInWithEmailAndPassword(auth, email, password)
-			console.log('User Logged In Successfully!!')
+		try {
+			await signInWithEmailAndPassword(auth, email, password);
+			console.log("User Logged In Successfully!!");
 			toast.success("User Registered Successfully!!", {
 				position: "top-center",
 			});
-			window.location.href = "/profile"
-		}catch(error){
-			console.log(error.message)
+			window.location.href = "/profile";
+		} catch (error) {
+			console.log(error.message);
 			toast.error(error.message, {
 				position: "bottom-center",
 			});
 		}
-		
 	}
 	return (
 		<div className="login">
